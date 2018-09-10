@@ -1,0 +1,37 @@
+#					Git Practical Guide
+
+1) Setting environment:
+	*	git config --global user.name "Bruno Almeida"	# username
+	*	git config --global user.email "brunoalmeida@crazytechlabs.com"	# user email
+	*	git config --global core.editor vim   # default editor
+	*	git config user.email	# check settings
+	*	git config --list	# list all the environment parameters
+	
+2) Starting git:
+	*	mkdir folder-name	# create a folder to initialize git
+	*	cd folder-name	# enter new directory
+	*	git init	# command to initialize git and generate ".git" folder
+
+3) Stag and Commit:
+	*	git status	# get status of directory
+	*	git add 'file-name'	# add file to modifieid stack
+	*	git commit -m 'Actualization Note' (or -am to commit all)	# commit modified files to a new version
+	
+4) Checking modifications and Resetting:
+	*	git log	# list all commitions
+	*	git shortlog	# list commitions by usernames
+	*	git show aaee83b173bc79754b4641a1079109380632400d	# list specific commit changes
+	*	git diff	# changes in modified files before commit
+	*	git checkout file-name	# discart changes of file-name
+	*	git reset HEAD file-name	# remove file from commit queue (opposite of add)
+	*	git reset <parameter> 67838f378c74006fe34b2af4d5234cf3f2caf15a	# downgrade to previous commits
+		**	<parameter> can assume:
+			--soft	# restore to selected HEAD (with staged files of previous commit)
+			--mixed	# restore to modified files but not added to stag pile
+			--hard	# restore completely from previous commit without staged modifications
+			
+5) Syncing with Github:
+	*	visit https://help.github.com/articles/connecting-to-github-with-ssh/ and follow the steps on "Generating a new SSH key and adding it to the ssh-agent"
+	*	go to Github > Settings > SSH and GPG Keys and paste key code from ~/.ssh/id_rsa.pub
+	*	follow the instructions from New Github repository to add files
+	

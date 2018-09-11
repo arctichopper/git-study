@@ -55,10 +55,10 @@
 9) Tags:
 	*	git tag -a 1.0.0 -m "Release Note"	# creates tag
 	*	git push origin master --tags	# commit tag to github
-	*	g tag	# show tags
-	*	g tag -D 1.0.0	# delete local tag
+	*	git tag	# show tags
+	*	git tag -d 1.0.0	# delete local tag
 	*	git push origin :1.0.0	# delete remote (github) tag
 	
-10) Rever:
+10) Revert:
 	*	git revert 67838f378c74006fe34b2af4d5234cf3f2caf15a (hash)	# revert changes but keep previous (bugged) commit
 	
